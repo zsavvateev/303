@@ -2,15 +2,22 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
     <title>Портфолио веб-разработчика</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+<header>
+
     <h1>Захар — Веб-разработчик</h1>
+
+    <button id="theme-toggle"
+            aria-label="Переключить тему">
+        🌙
+    </button>
 
     <button class="burger"
             id="burger-btn"
@@ -24,83 +31,135 @@
         <a href="#projects">Проекты</a>
         <a href="#contact">Контакты</a>
     </nav>
+
 </header>
 
-    <main>
+<main>
 
-        <section id="about">
-            <h2>Обо мне</h2>
-            <p>
-                Меня зовут Захар. Я изучаю веб-разработку,
-                HTML, CSS и JavaScript. Моя цель — создавать
-                современные и удобные сайты.
-            </p>
-        </section>
+    <section id="about">
 
-        <section id="skills">
-            <h2>Мои навыки</h2>
-            <p>
-                Я изучаю основы HTML, CSS, JavaScript и Git.
-                Постепенно осваиваю создание адаптивных сайтов.
-            </p>
-        </section>
-    <section id="projects">
-    <h2>Мои проекты</h2>
+        <h2>Обо мне</h2>
 
-    <div class="projects-grid">
-
-        <article>
-            <h3>Личный сайт-портфолио</h3>
-            <p>
-                Одностраничный сайт с информацией обо мне,
-                моих навыках и выполненных работах.
-            </p>
-        </article>
-
-        <article>
-            <h3>Сайт для медицинских работников</h3>
-            <p>
-                Сайт предназначен для медицинских работников
-                и сотрудников организаций.
-            </p>
-        </article>
-
-    </div>
-</section>
-
-        <section id="contact">
-            <h2>Связаться со мной</h2>
-
-            <form>
-                <label for="name">Имя:</label><br>
-                <input type="text" id="name" name="name" required>
-
-                <br><br>
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required>
-
-                <br><br>
-
-                <label for="message">Сообщение:</label><br>
-                <textarea id="message" name="message" rows="5"></textarea>
-
-                <br><br>
-
-                <button type="submit">Отправить</button>
-            </form>
-        </section>
-
-    </main>
-
-    <footer>
         <p>
-            &copy; 2026 Захар. Обновлено:
-            <span id="update-date"></span>
+            Меня зовут Захар.
+            Я изучаю HTML, CSS и JavaScript.
         </p>
-    </footer>
 
-    <script src="script.js"></script>
+        <div class="extra-info" id="extra-info">
+            <p>
+                Я продолжаю изучать современные
+                технологии веб-разработки и создаю
+                собственные проекты.
+            </p>
+        </div>
+
+        <button id="toggle-btn">
+            Показать больше
+        </button>
+
+    </section>
+
+    <section id="skills">
+
+        <h2>Мои навыки</h2>
+
+        <p>
+            HTML, CSS, JavaScript, Git,
+            адаптивная верстка и Flexbox/Grid.
+        </p>
+
+    </section>
+
+    <section id="projects">
+        <h2>Мои проекты</h2>
+
+    <div class="filters">
+        <button data-filter="all" class="active">
+            Все
+        </button>
+
+        <button data-filter="frontend">
+            Frontend
+        </button>
+
+        <button data-filter="design">
+            Дизайн
+        </button>
+
+        <button data-filter="education">
+            Учебные
+        </button>
+    </div>
+
+    <br>
+
+    <input
+        type="text"
+        id="search-input"
+        placeholder="Поиск проекта..."
+    >
+
+    <br><br>
+
+    <div
+        class="projects-grid"
+        id="projects-grid">
+    </div>
+
+    </section>
+
+    <section id="contact">
+
+        <h2>Связаться со мной</h2>
+
+        <form id="contact-form">
+
+            <label for="name">Имя</label>
+            <input type="text"
+                   id="name"
+                   name="name">
+
+            <span class="error"
+                  id="name-error"></span>
+
+            <label for="email">Email</label>
+            <input type="text"
+                   id="email"
+                   name="email">
+
+            <span class="error"
+                  id="email-error"></span>
+
+            <label for="message">
+                Сообщение
+            </label>
+
+            <textarea id="message"
+                      rows="5"></textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Отправить
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        © 2026 Захар.
+        Обновлено:
+        <span id="update-date"></span>
+    </p>
+
+</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
