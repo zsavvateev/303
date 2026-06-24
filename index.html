@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио веб-разработчика</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Захар — Веб-разработчик</h1>
+
+        <nav>
+            <a href="#about">Обо мне</a>
+            <a href="#skills">Навыки</a>
+            <a href="#projects">Проекты</a>
+            <a href="#contact">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="about">
+            <h2>Обо мне</h2>
+            <p>
+                Меня зовут Захар. Я изучаю веб-разработку,
+                HTML, CSS и JavaScript. Моя цель — создавать
+                современные и удобные сайты.
+            </p>
+        </section>
+
+        <section id="skills">
+            <h2>Мои навыки</h2>
+            <p>
+                Я изучаю основы HTML, CSS, JavaScript и Git.
+                Постепенно осваиваю создание адаптивных сайтов.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Мои проекты</h2>
+
+            <article>
+                <h3>Личный сайт-портфолио</h3>
+                <p>
+                    Одностраничный сайт с информацией обо мне,
+                    моих навыках и выполненных работах.
+                </p>
+            </article>
+
+            <article>
+                <h3>Сайт для медицинских работников по прохождению медицинской комиссии</h3>
+                <p>
+                    Сайт предназначен для медицинских работников и сотрудников организаций. 
+                    Он помогает получить информацию о прохождении медицинских осмотров, необходимых 
+                    документах и этапах комиссии.
+                </p>
+            </article>
+
+        </section>
+
+        <section id="contact">
+            <h2>Связаться со мной</h2>
+
+            <form>
+                <label for="name">Имя:</label><br>
+                <input type="text" id="name" name="name" required>
+
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required>
+
+                <br><br>
+
+                <label for="message">Сообщение:</label><br>
+                <textarea id="message" name="message" rows="5"></textarea>
+
+                <br><br>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            &copy; 2026 Захар. Обновлено:
+            <span id="update-date"></span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
